@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e2df549d9f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="game-grid">
+        <div class="turn" data-id="turn">
+          <i class="fa-solid fa-x yellow"></i>
+          <p class="yellow">Player 1, make a move!</p>
+        </div>
+        <div class="action" data-id="action">
+          <button class="action-btn" data-id="action-btn">
+            Actions
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="menu-items hide shared-border" data-id="menu-items">
+            <button class="reset-btn" data-id="reset-btn">Reset</button>
+            <button class="new-btn" data-id="new-btn">New Round</button>
+          </div>
+        </div>
+        <div id = "1" class="square shadow" data-id="square"></div>
+        <div id = "2" class="square shadow" data-id="square"></div>
+        <div id = "3" class="square shadow" data-id="square"></div>
+        <div id = "4" class="square shadow" data-id="square"></div>
+        <div id = "5" class="square shadow" data-id="square"></div>
+        <div id = "6" class="square shadow" data-id="square"></div>
+        <div id = "7" class="square shadow" data-id="square"></div>
+        <div id = "8" class="square shadow" data-id="square"></div>
+        <div id = "9" class="square shadow" data-id="square"></div>
+        
+        <div class="scoreboard shadow" style="background-color: #f9d949">
+            <p>Player 1</p>
+            <span data-id="p1-wins">0 wins</span>
+        </div>
+        <div class="scoreboard shadow" style="background-color: #f0f0f0">
+            <p>Ties</p>
+            <span data-id="ties">0</span>
+        </div>
+        <div class="scoreboard shadow" style="background-color: #f45050">
+            <p>Player 2</p>
+            <span data-id="p2-wins">0 Wins</span>
+        </div>
+      </div>
+    </main>
+    <div class="modal hide" data-id="modal">
+      <div class="modal-content" data-id="modal-content">
+        <p data-id="modal-text">Player 1 wins!</p>
+        <button data-id="modal-btn">Play again</button>
+      </div>
+    </div>
+    
+    <!-- insted of adding additional script tag use es-6 syntax -->
+    <!-- type=module states that the below script is es-6 module -->
+    <!-- we can import new scripts in base script using "import" now -->
+    <script src="script/App.js" type="module"></script>
+  </body>
+</html>
